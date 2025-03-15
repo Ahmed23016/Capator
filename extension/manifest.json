@@ -5,7 +5,8 @@
   "description": "Download YouTube videos as MP4 or MP3",
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "host_permissions": [
     "*://*.youtube.com/*",
