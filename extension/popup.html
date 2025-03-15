@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="icons/icon48.png" alt="Logo" class="logo">
+        <h1>YouTube Downloader</h1>
+    </div>
+
+    <div class="video-info">
+        <div class="thumbnail-container">
+            <img id="video-thumbnail" src="" alt="Video thumbnail">
+            <div class="duration" id="video-duration"></div>
+        </div>
+        <div class="video-details">
+            <h2 id="video-title">Loading video...</h2>
+            <p id="video-channel"></p>
+        </div>
+    </div>
+
+    <div class="format-selection">
+        <h3>Download Format</h3>
+        <div class="format-options">
+            <label class="format-option">
+                <input type="radio" name="format" value="mp4" checked>
+                <div class="option-content">
+                    <span class="format-icon">🎬</span>
+                    <span class="format-name">MP4 Video</span>
+                </div>
+            </label>
+            <label class="format-option">
+                <input type="radio" name="format" value="mp3">
+                <div class="option-content">
+                    <span class="format-icon">🎵</span>
+                    <span class="format-name">MP3 Audio</span>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="quality-selection" id="video-quality-section">
+        <h3>Video Quality</h3>
+        <select id="video-quality">
+            <option value="highest">Best Quality</option>
+            <option value="720p">720p</option>
+            <option value="480p">480p</option>
+            <option value="360p">360p</option>
+        </select>
+    </div>
+
+    <button id="download-btn" class="download-btn">
+        <span class="btn-icon">⬇️</span>
+        <span>Download</span>
+    </button>
+
+    <div class="download-progress" id="progress-container">
+        <div class="progress-bar">
+            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+        <span id="progress-text">0%</span>
+    </div>
+
+    <div class="status" id="status-message"></div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
